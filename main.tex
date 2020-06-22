@@ -5,6 +5,7 @@
 
 \usetikzlibrary{positioning}
 
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
 \newcommand{\n}{\mathbb{N}}
 \newcommand{\z}{\mathbb{Z}}
 \newcommand{\q}{\mathbb{Q}}
@@ -162,7 +163,7 @@ In terms of a graph, a curve can only be a function if no vertical lines interse
 
 \subsubsection{Limits}
 
-\textbf{Definition: } Supposing $f(x)$ is defined when $x$ is near the number $a$, we write $\lim_{x\to a} f(x) = L$ and say "the limit of $f(x)$, as $x$ approaches $a$, equals $L$".
+\textbf{Definition: } Supposing $f(x)$ is defined when $x$ is near the number $a$, we write $\lim_{x\to a} f(x) = L$ and say ``the limit of $f(x)$, as $x$ approaches $a$, equals $L$''.
 
 
 \begin{itemize}
@@ -246,43 +247,43 @@ $$\includegraphics[scale=.5]{media/limit01.png}$$
 
 If one of the aforementioned statements is incorrect, then $f(x)$ is discontinuous at $x=a$
 
-\textbf{Theorem 1:} A function is continuous on an interval if it's continuous at every number in the interval.\\
-If $f$ and $g$ are continuous at $x=a$, then the following are also continuous at $a$:\\
+\textbf{Theorem 1:} A function is continuous on an interval if it's continuous at every number in the interval. That is, if $f$ and $g$ are continuous at $x=a$, then the following are also continuous at $a$:\\
 $$f+g, f-g, cf, fg, \frac{f}{g} \text{ for } g(a) \neq{} 0$$
 
 
-\textbf{Theorem 2:} The following types of functions are continuous at every number in there domain:
-
-\begin{enumerate}
-    \item Polynomials (always $(-\infty, \infty)$)
-    \item Rational functions
-    \item Root functions
-    \item Trig functions
-\end{enumerate}
+\textbf{Theorem 2:} The following types of functions are continuous at every number in there domain: Polynomials, Rational functions, Root functions, \& Trig functions.\\
 
 
-\textbf{Theorem 3: Intermediate Value Theorem (IVM):} Suppose that $f$ is continuous on the close interval $[a,b]$ and let $N$ be any number between $f(a)$ and $f(b)$, where $f(a) \neq{} f(b)$. Then there exists at least on number $c$ in $(a,b)$ such that $f(c)=N$ 
+\textbf{Theorem 3: Intermediate Value Theorem (IVM):} Suppose that $f$ is continuous on the close interval $[a,b]$ and let $N$ be any number between $f(a)$ and $f(b)$, where $f(a) \neq{} f(b)$. Then there exists at least on number $c$ in $(a,b)$ such that $f(c)=N$. 
 
 $$\includegraphics[scale=.2]{media/ivm.png}$$
 
 \subsection{Day 4}
-\subsubsection{Line:}
+\subsubsection{Lines:}
 \paragraph{Secant Line:} A line that locally intersects two points on a curve.
 
 $$\frac{\text{Rise}}{\text{Run}} = \frac{\Delta y}{\Delta x} = \frac{y_1 - y_0}{x_1 - x_0} =  \frac{f(a+h)-f(a)}{(a+h)-a}=\frac{f(a+h)-f(a)}{h}$$
 
 $$\includegraphics[scale=.5]{media/secanteq.jpg}$$
 
-\paragraph{Tangent Line:} The line through a pair of infinitely close points on the curve so that the line is "just touching". Slope equation (also known as "Difference Quotient"):
+\paragraph{Tangent Line:} The line through a pair of infinitely close points on the curve so that the line is ``just touching''. Slope equation (also known as ``Difference Quotient''):
 
 $$\lim_{h \to 0} \left [ \frac{f(a+h)-f(a)}{h} \right ]$$
 
-\paragraph{Derivatives:} The derivative of a function $f$ at a number $a$, denoted by $f'(a)$, is 
+\subsubsection{Derivatives:} The derivative of a function $f$ at a number $a$, denoted by $f'(a)$, is 
 
 $$f'(a) = \lim_{h \to 0} \left [ \frac{f(a+h)-f(a)}{h} \right ]$$
 and the equation of the tangent line to the curve $y=f(x)$ at the point $(a,f(a))$ can be written in point-slope form as
 
 $$y-f(a)=f'(a)(x-a)$$
 
-
+\subsection{Day 5}
+\subsubsection{Derivatives (cont.):}
+\begin{itemize}
+    \item Other notation is $\frac{\d y}{\d x} |_{x=a}$ (Leibniz Notation),  $\frac{ \d f}{ \d x}$, $\frac{\d \ }{ \d x}$ $f(x)$, $f(x)$, $D f(x)$, \& $D_{x} f(x)$
+    \item Function $f(x)$ is differentiable at $x=a$ if $f'(a)$ exists (same as Theorem 1.5.1).
+    \item Therefore, Not Continuous $\implies$ Not Differentiable.
+    \item The derivative is a function, not a constant.
+    \item Because $f'$ is also a function, $f'$ may have a derivative of its own, denoted by $(f')' = f''$ and called the \textbf{second derivative} of $f$. This can be written as $\frac{\d \ }{\d x} \left ( \frac{\d y}{\d x} \right ) = \frac{\d\ ^2 y}{\d x^2}$
+\end{itemize}
 \end{document}
