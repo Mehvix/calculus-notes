@@ -87,7 +87,7 @@ $$ (ab)^m=a^m b^m$$
 $$ \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$$
 $$ (a^m)^n = a^{mn}$$
 $$ \sqrt{a} = a^{\frac{1}{2}}$$
-$$ ^n\sqrt{a} = a^{\frac{1}{n}}$$
+$$ \sqrt[n]{a} = a^{\frac{1}{n}}$$
 $$ \left(\sqrt[n]{a}\right)^m = \sqrt[n]{a^m} = a^{\frac{m}{n}}$$
 $$ \sqrt{a}\sqrt{b} = \sqrt{ab}$$
 $$ \sqrt[n]{a} \sqrt[n]{b} = \sqrt[n]{ab}$$\\
@@ -280,10 +280,47 @@ $$y-f(a)=f'(a)(x-a)$$
 \subsection{Day 5}
 \subsubsection{Derivatives (cont.):}
 \begin{itemize}
-    \item Other notation is $\frac{\d y}{\d x} |_{x=a}$ (Leibniz Notation),  $\frac{ \d f}{ \d x}$, $\frac{\d \ }{ \d x}$ $f(x)$, $f(x)$, $D f(x)$, \& $D_{x} f(x)$
+    \item Other notation is $\frac{d y}{d x} |_{x=a}$ (Leibniz Notation),  $\frac{d f}{d x}$, $\frac{d}{d x}$ $f(x)$, $f(x)$, $D f(x)$, \& $D_{x} f(x)$
     \item Function $f(x)$ is differentiable at $x=a$ if $f'(a)$ exists (same as Theorem 1.5.1).
     \item Therefore, Not Continuous $\implies$ Not Differentiable.
+    \item If $f'(a)$ exists, then $\lim_{x \to a} f(x) = f(a)$
     \item The derivative is a function, not a constant.
-    \item Because $f'$ is also a function, $f'$ may have a derivative of its own, denoted by $(f')' = f''$ and called the \textbf{second derivative} of $f$. This can be written as $\frac{\d \ }{\d x} \left ( \frac{\d y}{\d x} \right ) = \frac{\d\ ^2 y}{\d x^2}$
+    \item Because $f'$ is also a function, $f'$ may have a derivative of its own, denoted by $(f')' = f''$ and called the \textbf{second derivative} of $f$. This can also be written as $\frac{d}{d x} \left ( \frac{d y}{d x} \right ) = \frac{d^2 y}{dx^2}$
 \end{itemize}
+
+
+\subsection{Day 6}
+\subsubsection{Derivatives Rules:}
+
+\begin{minipage}{0.5\textwidth}
+
+\begin{itemize}
+    \item Constant: $\frac{d}{d x}(c) = 0$
+    \item Linear: $\frac{d}{d x}(x) = 1$
+\end{itemize}
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+\begin{itemize}
+    \item Linear + Constant: $\frac{d}{d x}(ax) = a$
+    \item Power Rule: $\frac{d}{d x}(x^n) = n x^{n-1}$
+\end{itemize}
+\end{tabular}
+\end{minipage}
+
+\begin{itemize}
+    \item Constant Multiple: $\frac{d}{d x}[c \cdot f(x)] = c \cdot \frac{d}{d x}(f(x))$
+    \item Sum/Difference: $\frac{d}{d x}[f(x) \pm g(x)] = \frac{d}{d x}f(x) \pm \frac{d}{d x}g(x)=f'(x) \pm g'(x)$
+    \item Product Rule: $\frac{d}{d x}[f(x)\cdot g(x)] = \left(g(x)\cdot\frac{d}{d x} f(x)\right)+\left(f(x)\cdot\frac{d}{d x}g(x)\right)$
+    \item Quotient Rule: $\frac{d}{d x}\left[ \frac{f(x)}{g(x)} \right] = \frac{g(x)\cdot f'(x) - f'(x)\cdot g(x)}{(g(x))^2} = \frac{\text{lo} \cdot \text{d hi - hi} \cdot \text{d lo}}{\text{lo}\cdot\text{lo}}$
+\end{itemize}
+
+\subsubsection{Lines:}
+\textbf{Theorem:} If the graph of $y=m_1x+b_1$ is perpendicular to the graph of $y=m_2x+b_2$, then $m_1m_2 = -1$
+\textbf{Normal Line:} The normal line to a curve at point $M$ is the line through $M$ that is perpendicular to the tangent line at $M$.
+
+$$\includegraphics[scale=.8]{media/normal-tangent.png}$$
+
+
 \end{document}
