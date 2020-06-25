@@ -125,8 +125,8 @@ In terms of a graph, a curve can only be a function if no vertical lines interse
     \item Closed circles, $\bullet$, and square brackets, [ ], are inclusive.
     \item Formatted as: 
     \item[] $f(x)=\begin{cases} 
-              y=5 \& x < 0 \\
-              y=x^2 \& x\geq 0 
+              y=5   : x < 0 \\
+              y=x^2 : x\geq 0 
             \end{cases}$
 \end{itemize}
 
@@ -184,7 +184,7 @@ In terms of a graph, a curve can only be a function if no vertical lines interse
     \item If function limit is $\pm \infty$ (if the denominator is 0 at $f(a)$), you can find whether its $\Plus{}$ or $\Minus{}$ by solving the limit for each term. If the term is positive, then it's $+ \infty$, and vice-versa, e.g.
     
     $$\lim_{x \to -2^+} \frac{x-1}{x^2(x+2)}$$
-    $$\frac{\lim_{x \to -2^+} [x-1]}{\lim_{x \to -2^+} [x^2] \cdot \lim_{x \to -2^+} [(x+2)]}$$
+    $$\frac{\lim_{x \to -2^+} [x-1]}{ (\lim_{x \to -2^+} [x])^2 \cdot \lim_{x \to -2^+} [(x+2)]}$$
     $$\frac{\ominus}{\oplus \cdot \oplus}$$
     $$\ominus \rightarrow{} -\infty$$
 
@@ -231,14 +231,20 @@ $$\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{f(a)} \text{ if } f(a) \geq 0 \text{ 
 
 
 \subsubsection{Piecewise / $(\epsilon, \delta)$ definition  of limit}
-If for every small number $\epsilon >  0$ there is a number $\delta > 0$ such that if $0 < |x-a| < \delta$ then $|f(x) - L| < \epsilon$.
+If for every small number $\epsilon >  0$ there is a number $\delta > 0$ such that if $0 < |x-c| < \delta$ then $|f(x) - L| < \epsilon$.
 
 $$\includegraphics[scale=.5]{media/limit01.png}$$
 
+\noindent Solving for $\delta$, rewrite the term defining $\epsilon$ to be equal to the term defining $\delta$. E.g., solving for $\delta$ if $|x-2|<\delta$, then $|4x-8|<\epsilon$, where $\epsilon = 0.1$:
+
+$$|4x-8|=4|x-2|<0.1$$
+$$|x-2| < \frac{0.1}{4}\text{, therefore } \delta=\frac{0.1}{4}$$
+
+\noindent For non-linear equations, find the lesser and greater $\delta$, and choose the one that results in the smaller $\epsilon$.
 
 \subsection{Day 3}
 \subsubsection{Continuous Function:}
-\textbf{Definition:} A function $f$ is continuous at  a number if $\lim_{x\to a} f(x) = f(a)$. Graphically, a function is continuous if you can draw it without having your pen leave paper. More formally, $f(x)$ is continuous at $x=a iff:$ 
+\textbf{Definition:} A function $f$ is continuous at  a number if $\lim_{x\to a} f(x) = f(a)$. Graphically, a function is continuous if you can draw it without having your pen leave paper. More formally, $f(x)$ is continuous at $x=a \iff:$ 
 
 \begin{enumerate}
     \item $f(a)$ is defined ($a \in{} D: $ $a$ is in the domain of $f$).
@@ -311,16 +317,46 @@ $$y-f(a)=f'(a)(x-a)$$
 
 \begin{itemize}
     \item Constant Multiple: $\frac{d}{d x}[c \cdot f(x)] = c \cdot \frac{d}{d x}(f(x))$
-    \item Sum/Difference: $\frac{d}{d x}[f(x) \pm g(x)] = \frac{d}{d x}f(x) \pm \frac{d}{d x}g(x)=f'(x) \pm g'(x)$
-    \item Product Rule: $\frac{d}{d x}[f(x)\cdot g(x)] = \left(g(x)\cdot\frac{d}{d x} f(x)\right)+\left(f(x)\cdot\frac{d}{d x}g(x)\right)$
-    \item Quotient Rule: $\frac{d}{d x}\left[ \frac{f(x)}{g(x)} \right] = \frac{g(x)\cdot f'(x) - f'(x)\cdot g(x)}{(g(x))^2} = \frac{\text{lo} \cdot \text{d hi - hi} \cdot \text{d lo}}{\text{lo}\cdot\text{lo}}$
+    \item Sum/Difference: $\frac{d}{d x}[f(x) \pm g(x)] = f'\pm g'$
+    \item Product Rule: $\frac{d}{d x}[f(x)\cdot g(x)] = f'\cdot g + f \cdot g'$
+    \item Quotient Rule: $\frac{d}{d x}\left[ \frac{f(x)}{g(x)} \right] = \frac{g\cdot f'- f\cdot g'}{g^2} = \frac{\text{lo} \cdot \text{d hi - hi} \cdot \text{d lo}}{\text{lo}\cdot\text{lo}}$
 \end{itemize}
 
 \subsubsection{Lines:}
-\textbf{Theorem:} If the graph of $y=m_1x+b_1$ is perpendicular to the graph of $y=m_2x+b_2$, then $m_1m_2 = -1$
+\textbf{Theorem:} If the graph of $y=m_1x+b_1$ is perpendicular to the graph of $y=m_2x+b_2$, then $m_1m_2 = -1$. 
+\\
 \textbf{Normal Line:} The normal line to a curve at point $M$ is the line through $M$ that is perpendicular to the tangent line at $M$.
 
 $$\includegraphics[scale=.8]{media/normal-tangent.png}$$
 
+
+\subsection{Day 7}
+\subsubsection{Trig Review:}
+$$\csc = \frac{1}{\sin}, \ \sec = \frac{1}{\cos}, \ \cot = \frac{1}{\tan} = \frac{\cos}{\sin}$$
+\subsubsection{Trig Identities:}
+$$\sin^2 + \cos^2 = 1$$
+$$\text{Dividing by }\sin^2: 1 + \frac{\cos^2}{\sin^2} = \frac{1}{\sin^2} \rightarrow{} 1 + \cot^2 = \csc^2$$
+$$\text{Dividing by }\cos^2: \frac{\sin^2}{\cos^2} + 1 = \frac{1}{\cos^2} \rightarrow{} \tan^2 + 1 = \sec^2$$
+\subsubsection{Derivative of Trig Functions:}
+\begin{minipage}{0.5\textwidth}
+    
+    $$(\sin)' = \cos$$
+    $$(\cos)' = -\sin$$
+    $$(\tan)' = \sec^2 $$
+\hfil
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+
+    $$(\csc)' = \csc \cdot \cot$$
+    $$(\sec)' = \sec \cdot \tan$$
+    $$(\cot)' = -\csc^2 $$
+
+\end{tabular}
+\end{minipage}
+
+\subsubsection{Limit of Trig Functions:}
+
+$$\lim_{\theta \to 0}{\frac{\sin \theta}{\theta}} = 1$$
 
 \end{document}
