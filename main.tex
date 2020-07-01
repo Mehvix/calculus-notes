@@ -348,7 +348,7 @@ $$\text{Dividing by }\cos^2: \frac{\sin^2}{\cos^2} + 1 = \frac{1}{\cos^2} \right
 \begin{minipage}{0.45\textwidth}
 \begin{tabular}{|p{\textwidth}}
 
-    $$(\csc)' = \csc \cdot \cot$$
+    $$(\csc)' = -\cot \cdot \csc$$
     $$(\sec)' = \sec \cdot \tan$$
     $$(\cot)' = -\csc^2 $$
 
@@ -359,4 +359,27 @@ $$\text{Dividing by }\cos^2: \frac{\sin^2}{\cos^2} + 1 = \frac{1}{\cos^2} \right
 
 $$\lim_{\theta \to 0}{\frac{\sin \theta}{\theta}} = 1$$
 
+
+\subsection{Day 9}
+\subsubsection{Composite Function: } A new function can be  composed to two old functions, such as $f \circ g$. Formally, given two functions $f$ and $g$, the composite function $f \circ g$ and $g \circ f$ (also called the composition of $f$ and $g$) is defined by $(f \circ g)(x)  = f(g(x))$ and $(g \circ f)(x)  = g(f(x))$
+
+\subsubsection{Decomposite Function: } Many functions can be decomposed into small functions, $h(x) = f(g(x))$
+
+\subsubsection{Chain Rule} If the composite function $F(x) = f \cdot g$ is defined by $F(x) = f(g(x))$ is differentiable at $x$ and $F'$ is given by the product 
+
+$$F'(x) = f'(g(x)) \cdot g'(x) \text{ or } OUT'(in) \cdot IN'$$
+
+\noindent\text{The power rule can be combined with the chain rule as}
+
+$$\frac{d}{dx}[g(x)]^n = n[g(x)]^{n-1} \cdot g'(x)$$
+
+
+\subsection{Day 10}
+
+\subsubsection{Explicit and Implicit:}
+\textbf{Explicit: } A function given in terms of the independent variable, e.g. $y=\sqrt{x^3+1}$.\\
+\textbf{Implicit: } A function given in terms of both dependent and independent variables, e.g. $x^3-y^2+1=0,\ y \geq 0$.\\
+\textbf{Implicit Differentiation: } If the function is stuck in implicit form, then differentiate both sides of the equation with respect to $x$ and solve the resulting equation for $y'$.\\
+\textbf{Note: }
+$$\frac{d}{dx}(y^n) \neq{} ny^{n-1}  \ \ \ \ \ \ \frac{d}{dx}(y^n) = ny^{n-1} \cdot y'$$
 \end{document}
