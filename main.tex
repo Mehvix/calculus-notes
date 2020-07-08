@@ -233,7 +233,7 @@ $$\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{f(a)} \text{ if } f(a) \geq 0 \text{ 
 \subsubsection{Piecewise / $(\epsilon, \delta)$ definition  of limit}
 If for every small number $\epsilon >  0$ there is a number $\delta > 0$ such that if $0 < |x-c| < \delta$ then $|f(x) - L| < \epsilon$.
 
-$$\includegraphics[scale=.5]{media/limit01.png}$$
+$$\includegraphics[width=0.5\textwidth]{media/limit01.png}$$
 
 \noindent Solving for $\delta$, rewrite the term defining $\epsilon$ to be equal to the term defining $\delta$. E.g., solving for $\delta$ if $|x-2|<\delta$, then $|4x-8|<\epsilon$, where $\epsilon = 0.1$:
 
@@ -262,7 +262,7 @@ $$f+g, f-g, cf, fg, \frac{f}{g} \text{ for } g(a) \neq{} 0$$
 
 \textbf{Theorem 3: Intermediate Value Theorem (IVM):} Suppose that $f$ is continuous on the close interval $[a,b]$ and let $N$ be any number between $f(a)$ and $f(b)$, where $f(a) \neq{} f(b)$. Then there exists at least on number $c$ in $(a,b)$ such that $f(c)=N$. 
 
-$$\includegraphics[scale=.2]{media/ivm.png}$$
+$$\includegraphics[width=0.5\textwidth]{media/ivm.png}$$
 
 \subsection{Day 4}
 \subsubsection{Lines:}
@@ -270,7 +270,7 @@ $$\includegraphics[scale=.2]{media/ivm.png}$$
 
 $$\frac{\text{Rise}}{\text{Run}} = \frac{\Delta y}{\Delta x} = \frac{y_1 - y_0}{x_1 - x_0} =  \frac{f(a+h)-f(a)}{(a+h)-a}=\frac{f(a+h)-f(a)}{h}$$
 
-$$\includegraphics[scale=.5]{media/secanteq.jpg}$$
+$$\includegraphics[width=0.65\textwidth]{media/secanteq.jpg}$$
 
 \paragraph{Tangent Line:} The line through a pair of infinitely close points on the curve so that the line is ``just touching''. Slope equation (also known as ``Difference Quotient''):
 
@@ -327,7 +327,7 @@ $$y-f(a)=f'(a)(x-a)$$
 \\
 \textbf{Normal Line:} The normal line to a curve at point $M$ is the line through $M$ that is perpendicular to the tangent line at $M$.
 
-$$\includegraphics[scale=.8]{media/normal-tangent.png}$$
+$$\includegraphics[width=0.5\textwidth]{media/normal-tangent.png}$$
 
 
 \subsection{Day 7}
@@ -399,8 +399,8 @@ A related rates problem is to compute the rate of change (derivative) of one qua
 
 \subsection{Day 12}
 \subsubsection{Maximum and Minimum Values:}
-\textbf{Absolute or Global [Max/Min]: } The [max/min] $y$-value in the domain. 
-\textbf{Relative or Local [Max/Min]: } The [max/min] $y$-value in a given range around a $x$-value. Can only occur when the graph goes from [increasing to decreasing / vice-versa]
+\textbf{Absolute or Global [Max/Min]: } The [max/min] $y$-value in the domain. \\
+\textbf{Relative or Local [Max/Min]: } The [max/min] $y$-value in a given range around a $x$-value. Can only occur when the graph goes from [increasing to decreasing / vice-versa]\\
 \textbf{Note: } The endpoint of a graph can never be a relative [max/min] because one side of the point is always undefined. 
 
 \subsubsection{Increasing/Decreasing Functions:}
@@ -425,5 +425,84 @@ $$\includegraphics[scale=.75]{media/concavity.png}$$
     \item The largest of the values from steps 2 and 3 is the absolute max, the smallest is the absolute min.
     
 \end{enumerate}
+
+
+\subsection{Day 13}
+\subsubsection{Rolle's Theorem} Let $f$ be a function that satisfies the following three hypotheses:
+\begin{enumerate}
+    \item $f$ is continuous on the closed interval $[a,b]$
+    \item $f$ is differentiable on the open interval $(a,b)$
+    \item $f(a) = f(b)$
+\end{enumerate}
+Then there is at least one number $c$ in $(a,b)$ such that $f'(c) = 0$
+
+$$\includegraphics[width=0.7\textwidth]{media/rolles.png}$$
+
+\paragraphNewLine{Proof}
+\begin{itemize}
+    \item Case 1: $f(x) = k, $ a constant. Then, $f'(x) = 0$ so the number $c$ can be taken to be any number in $(a,b)$.
+    \item Case 2: $f(x) > f(a), $ concave down, for some $x$ in $(a,b)$. By the extreme value theorem, $f$ has a max value in $[a,b]$. Since $f(a)=f(b)$, it must attain it's max value at $c$; $c \in (a,b)$. Then, $f$ has a local max at $c$, $f$ is differentiable at $c$, therefore $f'(c)$ = 0 by Fermat's theorem. 
+    \item Case 3: $f(x) < f(a), $ concave up, for some $x$ in $(a,b)$. By the extreme value theorem, $f$ has a min value in $[a,b]$. Since $f(a)=f(b)$, it must attain it's min value at $c$; $c \in (a,b)$. Then, $f$ has a local min at $c$, $f$ is differentiable at $c$, therefore $f'(c)$ = 0 by Fermat's theorem. 
+\end{itemize}
+
+\subsubsection{Mean Value Theorem} Let $f$ be a function that satisfies the following hypotheses: 
+
+\begin{itemize}
+    \item $f$ is continuous on the closed interval $[a,b]$
+    \item $f$ is differentiable on the open interval $(a,b)$
+\end{itemize}
+
+Then there is at least one number $c$ in $(a,b)$ such that $$f'(c)=\frac{f(b)-f(a)}{b-a}$$
+$$\text{Slope of tangent line at } c = \text{Slope of Secant Line} $$
+$$f(b) - f(a) = f'(c)(b-a)$$
+
+$$\includegraphics[width=0.7\textwidth]{media/mvt.png}$$
+
+\subsection{Day 14}
+\subsubsection{Determining Increasing/Decreasing: }
+\begin{enumerate}
+    \item Find the critical numbers
+    \item Mark the critical numbers on a real line
+    \item Pick a test number, $c$, in each interval:
+    \item[$\cdot$] If $f'(c) > 0$, $f$ is increasing at that interval
+    \item[$\cdot$] If $f'(c) < 0$, $f$ is decreasing at that interval
+\end{enumerate}
+
+\subsubsection{Local max and min: }
+\begin{enumerate}
+    \item Find the critical numbers
+    \item Mark the critical numbers on a real line
+    
+    \item Pick a test number, $c$, in each interval:
+    \item[$\cdot$] If $f'$ changes from $\oplus$ to $\ominus$, then $f$ has a local max at $f(c)$
+    \item[$\cdot$] If $f'$ changes from $\ominus$ to $\oplus$, then $f$ has a local min at $f(c)$
+    \item[$\cdot$] If $f'$ doesn't change sign, then $f$ has no local min or min at $f(c)$
+\end{enumerate}
+
+\subsubsection{Second Derivative Test} Suppose $f''$ is continuous near $c$. 
+\begin{enumerate}
+    \item If $f'(c) = 0$ and $f''(c) < 0$, then $f$ has a local max at $c$.
+    \item If $f'(c) = 0$ and $f''(c) > 0$, then $f$ has a local min at $c$.
+    \item If $f'(c) = 0$ and $f''(c) = 0$, then the second derivative test says nothing about the point $c$, a possible inflection point
+\end{enumerate}
+\subsubsection{Finding Concavity}
+\begin{enumerate}
+    \item $f(x)$ increasing implies $f'(x)>0$
+    \item $f'(x)$ increasing implies $f''(x)>0$
+    \item $f''(x)>0$ for all $x$ in $l$, then the graph of $f$ is concave upwards on $l$
+    \item $f''(x)<0$ for all $x$ in $l$, then the graph of $f$ is concave downwards on $l$
+\end{enumerate}
+
+\paragraphNewLine{Inflection Point:} A point $p$ on a curve $f(x)$ is called an inflection point if $f$ is continuous there and the curve changes at $p$ from concave up to concave down or vice versa.
+
+\paragraphNewLine{Theorem:} At a point of inflection, $(c, f(c))$, either $f''(c)=0$ or $f''(c)$ DNE
+
+\subsection{Day 15}
+\subsubsection{Limit at $\infty{}$} Let $f$ be a function defined on some interval $(a, +\infty{})$. Then $\lim_{x \to \infty{}} f(x) = L$ means that the value of $f(x)$ can be made arbitrarily close to $L$ by making $x$ sufficiently large. In other words, for every $\epsilon > 0$, there is a number $N$ such that if $x<N$ then $|f(x)-L| < \epsilon$. "$N$": Large negative number.
+
+\subsubsection{Horizontal Asymptote} The line $y=L$ is called a  horizontal asymptote of the curve $y=f(x)$ if either $\lim_{x \to +\infty{}} f(x) = L$ or $\lim_{x \to -\infty{}} f(x) = L$
+
+\paragraphNewLine{Theorem} If $r>0$ is a rational number, then $\lim_{x \to \infty{}} \frac{1}{x^r} = 0$\\
+If $r>0$ is a rational number such that $x^r$ is defined for all $x$, then $\lim_{x \to -\infty{}} \frac{1}{x^r} = 0$
 
 \end{document}
