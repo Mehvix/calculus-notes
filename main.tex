@@ -283,6 +283,7 @@ and the equation of the tangent line to the curve $y=f(x)$ at the point $(a,f(a)
 
 $$y-f(a)=f'(a)(x-a)$$
 
+\section{Week 2}
 \subsection{Day 5}
 \subsubsection{Derivatives (cont.):}
 \begin{itemize}
@@ -359,7 +360,7 @@ $$\text{Dividing by }\cos^2: \frac{\sin^2}{\cos^2} + 1 = \frac{1}{\cos^2} \right
 
 $$\lim_{\theta \to 0}{\frac{\sin \theta}{\theta}} = 1$$
 
-
+\section{Week 3}
 \subsection{Day 9}
 \subsubsection{Composite Function: } A new function can be  composed to two old functions, such as $f \circ g$. Formally, given two functions $f$ and $g$, the composite function $f \circ g$ and $g \circ f$ (also called the composition of $f$ and $g$) is defined by $(f \circ g)(x)  = f(g(x))$ and $(g \circ f)(x)  = g(f(x))$
 
@@ -426,7 +427,7 @@ $$\includegraphics[scale=.75]{media/concavity.png}$$
     
 \end{enumerate}
 
-
+\section{Week 3}
 \subsection{Day 13}
 \subsubsection{Rolle's Theorem} Let $f$ be a function that satisfies the following three hypotheses:
 \begin{enumerate}
@@ -438,7 +439,7 @@ Then there is at least one number $c$ in $(a,b)$ such that $f'(c) = 0$
 
 $$\includegraphics[width=0.7\textwidth]{media/rolles.png}$$
 
-\paragraphNewLine{Proof}
+\paragraph{Proof}
 \begin{itemize}
     \item Case 1: $f(x) = k, $ a constant. Then, $f'(x) = 0$ so the number $c$ can be taken to be any number in $(a,b)$.
     \item Case 2: $f(x) > f(a), $ concave down, for some $x$ in $(a,b)$. By the extreme value theorem, $f$ has a max value in $[a,b]$. Since $f(a)=f(b)$, it must attain it's max value at $c$; $c \in (a,b)$. Then, $f$ has a local max at $c$, $f$ is differentiable at $c$, therefore $f'(c)$ = 0 by Fermat's theorem. 
@@ -504,5 +505,94 @@ $$\includegraphics[width=0.7\textwidth]{media/mvt.png}$$
 
 \paragraphNewLine{Theorem} If $r>0$ is a rational number, then $\lim_{x \to \infty{}} \frac{1}{x^r} = 0$\\
 If $r>0$ is a rational number such that $x^r$ is defined for all $x$, then $\lim_{x \to -\infty{}} \frac{1}{x^r} = 0$
+
+
+\section{Week 5}
+
+\subsection{Day 17} 
+\subsubsection{Optimization} 
+\begin{enumerate}
+    \item Understand the problem. What is the unknown? What are the given quantities? What are the given conditions?
+    \item Draw a diagram.  Show variables.
+    \item Introduce notation. Assign $Q$ to the quantity that is to be maximized or minimized.
+    \item Express $Q$ in terms of other variables.
+    \item If $Q$ is expressed with more than one variable, use the given info to find a relationship among these variables.
+    \item Find the absolute max or min value of the $Q$ (the function). 
+\end{enumerate}
+
+
+\subsection{Day 18}
+\subsubsection{Area Under Curve: } The area $A$ of the region $S$ that lies under the graph of the continuous function $f$ is the limit of the sum of the areas of approximating rectangles:
+
+$$A=\lim_{n\to \infty} R_n = \lim_{n\to \infty} (f(x_1)\Delta x) + f(x_2)\Delta x) + ... + f(x_n)\Delta x) = \lim_{n\to \infty} \sum_{i=1}^{n} f(x_i)\Delta x$$
+$$A=\lim_{n\to \infty} r_n = \lim_{n\to \infty} (f(x_0)\Delta x) + f(x_1)\Delta x) + ... + f(x_{n-1})\Delta x)= \lim_{n\to \infty} \sum_{i=1}^{n} f(x_{i-1})\Delta x$$
+
+\subsubsection{Absolute Extreme Values} Suppose that $c$ is a critical number of a continuous function $f$ defined on an interval. 
+\begin{itemize}
+    \item If $f'(x)>0$ for all $x<c$, and $f'(x)<0$ for all $x>c$, then $f(c)$ is the absolute max for values of $f$.
+    \item If $f'(x)<0$ for all $x<c$, and $f'(x)>0$ for all $x>c$, then $f(c)$ is the absolute min for values of $f$.
+\end{itemize}
+
+\subsubsection{Anti-derivative}
+A function $F$ is called an antiderivative of $f$ on an interval $l$ if $F'(x) = f(x)$ for all $x$ in $l$.
+
+\noindent For example, $F(x)=x^3$ and $f(x) = 3x^2$:
+\begin{itemize}
+    \item $f(x)$ is derivative of function $F(x)$
+    \item $F(x)$ is antiderivative of function $f(x)$
+\end{itemize}
+
+\paragraph{Theorem} If $F$ is an antiderivative of $f$ on an interval $l$, then the most general antiderivative of $f$ on $l$ is $F(x)+C$ where $C$ is an arbitrary constant.
+
+\paragraph{Initial Condition Steps}
+\begin{enumerate}
+    \item Find the anti-derivative of $f(x)$
+    \item Plug in the initial  condition to evaluate constant $C$
+    \item Find the solution
+\end{enumerate}
+
+\subsubsection{Differential Equations} An equation that involves the derivatives of a function is called a differential equation.\\
+The solution of a differential equation is a function that satisfies the equation. 
+
+\subsection{Day 19}
+
+\subsubsection{Definite Integral} 
+
+If $f$ is continuous on $[a,b]$, or if $f$ has only a finite number of jump discontinuities, then $f$ is integrable on $[a,b]$; that is, the definite integral exists.
+$$\int_a^b f(x) dx=\lim_{n\to \infty} \sum_{i=1}^{n} f(x_i^*)\Delta x$$
+
+
+\paragraph{Properties}
+
+$$\int_a^a f(x) dx = 0$$
+$$\int_a^b f(x) dx = -\int_b^a f(x) dx$$
+$$\int_a^b c \cdot dx = c(b-a)$$
+$$\int_a^b \left[f(x) \pm g(x)\right] dx = \int_a^b f(x) dx \pm \int_a^b g(x) dx$$
+$$\int_a^c f(x) dx = \int_a^b f(x) dx + \int_b^c f(x) dx \text{ where } a < b < c$$
+
+\paragraph{Comparison Properties}
+
+$$f(x)>0 \text{ for } a < x < b, \text{ then } \int_a^b f(x)dx > 0$$ 
+$$f(x)>g(x) \text{ for } a < x < b, \text{ then } \int_a^b f(x)dx > \int_a^b g(x)dx$$ 
+$$m<f(x)<M \text{ for } a < x < b, \text{ then } m(b-a) < \int_a^b f(x)dx < M(b-a)$$ 
+
+\subsection{Day 20}
+
+\subsubsection{Fundamental Theorem of Calculus (1)} 
+If $f(x)$ is continuous on $[a,b]$, then the function $g$ defined by  $g(x) = \int_a^x f(t) dt$ for $a \leq x \leq b$, is continuous on $[a,b]$ and differentiable on $(a,b)$, and $g'(x)$=$f(x)$. In other words, 
+$$\frac{d}{dx} \left[\int_a^x f(t)dt \right] = f(x)$$
+
+\subsubsection{Fundamental Theorem of Calculus (2)} 
+If $f(x)$ is continuous on $[a,b]$, then $\int_a^b f(x)dx = F(b)-F(a)$. where   $F(x)$ is any antiderivative of $f$, that is, a function such that $F'=f$.
+
+\paragraph{Notation:} 
+$$F(b)-F(a) = F(x)\big|_a^b = F(x)\big]_a^b$$
+
+\subsubsection{Properties of Definite Integral}
+$$\int_{-a}^a f(x)dx = 0\text{ if } f(x) \text{ is odd}$$
+$$\int_{-a}^a f(x)dx = 2\cdot\int_{0}^a f(x)dx \text{ if } f(x) \text{ is even}$$
+
+
+
 
 \end{document}
