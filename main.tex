@@ -490,8 +490,8 @@ $$\includegraphics[width=0.7\textwidth]{media/mvt.png}$$
 \begin{enumerate}
     \item $f(x)$ increasing implies $f'(x)>0$
     \item $f'(x)$ increasing implies $f''(x)>0$
-    \item $f''(x)>0$ for all $x$ in $l$, then the graph of $f$ is concave upwards on $l$
-    \item $f''(x)<0$ for all $x$ in $l$, then the graph of $f$ is concave downwards on $l$
+    \item $f''(x)>0$ for all $x$ in $I$, then the graph of $f$ is concave upwards on $I$
+    \item $f''(x)<0$ for all $x$ in $I$, then the graph of $f$ is concave downwards on $I$
 \end{enumerate}
 
 \paragraphNewLine{Inflection Point:} A point $p$ on a curve $f(x)$ is called an inflection point if $f$ is continuous there and the curve changes at $p$ from concave up to concave down or vice versa.
@@ -534,7 +534,7 @@ $$A=\lim_{n\to \infty} r_n = \lim_{n\to \infty} (f(x_0)\Delta x) + f(x_1)\Delta 
 \end{itemize}
 
 \subsubsection{Anti-derivative}
-A function $F$ is called an antiderivative of $f$ on an interval $l$ if $F'(x) = f(x)$ for all $x$ in $l$.
+A function $F$ is called an antiderivative of $f$ on an interval $I$ if $F'(x) = f(x)$ for all $x$ in $I$.
 
 \noindent For example, $F(x)=x^3$ and $f(x) = 3x^2$:
 \begin{itemize}
@@ -542,7 +542,7 @@ A function $F$ is called an antiderivative of $f$ on an interval $l$ if $F'(x) =
     \item $F(x)$ is antiderivative of function $f(x)$
 \end{itemize}
 
-\paragraph{Theorem} If $F$ is an antiderivative of $f$ on an interval $l$, then the most general antiderivative of $f$ on $l$ is $F(x)+C$ where $C$ is an arbitrary constant.
+\paragraph{Theorem} If $F$ is an antiderivative of $f$ on an interval $I$, then the most general antiderivative of $f$ on $I$ is $F(x)+C$ where $C$ is an arbitrary constant.
 
 \paragraph{Initial Condition Steps}
 \begin{enumerate}
@@ -592,6 +592,81 @@ $$F(b)-F(a) = F(x)\big|_a^b = F(x)\big]_a^b$$
 $$\int_{-a}^a f(x)dx = 0\text{ if } f(x) \text{ is odd}$$
 $$\int_{-a}^a f(x)dx = 2\cdot\int_{0}^a f(x)dx \text{ if } f(x) \text{ is even}$$
 
+
+\section{Week 6}
+
+\subsection{Day 21}
+
+\subsubsection{Indefinite Integral} If $F(x)$ is any anti-derivative of $f(x)$, then the most general anti-derivative of $f(x)$ is called an indefinite integral and denoted as 
+
+$$\int f(x)dx = F(x) + C$$
+
+\paragraph{Indefinite vs Definite Integrals} Definite is a number, where as indefinite is a family of functions
+
+\subsubsection{Integral Rules}
+$$\includegraphics[width=0.85\textwidth]{media/indef-integrals.JPG}$$
+
+
+
+\subsubsection{Net Change Theorem} The integral of a rate of change is the net change, $\int_a^b F'(x)dx = F(b)-F(a)$
+
+
+
+
+\subsection{Day 22}
+
+\subsubsection{Integration by Substitution}  A function $F$ is called an anti-derivative of $f$ on an interval $I$ if $F’(x)=f(x)$ for all $x$ in $I$.
+
+\begin{enumerate}
+    \item Let $u=g(x)$, where $g(x)$ is part of the integrand.
+    \item Calculate $\frac{du}{dx}$ (or $g'(x)$)
+    \item Use the substitution $u=g(x)$ and $du=g'(x)dx$ to convert the entire integral into one involving only $u$
+    \item If indefinite, evaluate the resulting integral and plug in $u$ by $g(x)$.
+    \item If definite, plug in the lower limit of the integral and the upper limit of the integral into the expression $u=g(x)$ and get the new lower and upper limits. Then, evaluate the new definite integral (involving only $u$) by finding the anti-derivative of $f$ and use the Fundamental Theorem.
+\end{enumerate}
+
+\subsubsection{Substitution Rule for Definite Integral}
+If $g'$ is continuous on $[a,b]$ and $f$ is continuous on the range of $u=g(x)$, then
+
+$$\int_a^b f(g(x)) \cdot g'(x) dx = \int_{g(a)}^{g(b)} f(u) du$$
+
+
+\subsection{Day 23}
+
+\subsubsection{One-to-One Function} A function $f$ that never takes one a same value twice; that is $f(x_1)\neq f(x_2)$ whenever $x_1\neq x_2$. 
+
+$$\includegraphics[width=0.65\textwidth]{media/onetoone.JPG}$$
+
+\paragraph{Horizontal Line Test} If you draw a horizontal line through the graph, it should only intersect once if it's a 1-to-1 function.
+
+\paragraph{Remark} All strictly increasing/decreasing functions are 1-to-1
+\begin{itemize}
+    \item $f'(a) > 0$ means strictly increasing
+    \item $f'(a) < 0$ means strictly decreasing
+\end{itemize}
+
+\subsubsection{Inverse Function} Let function $f$ be a 1-to-1 function with domain $A$ and range $B$. Then its inverse function $f^{-1}$ has domain $B$ and range $A$ and is defined by $f^{-1}(y)=x \iff f(x)=y$ for any $y$ in $B$.
+
+\paragraph{Remark} 
+\begin{itemize}
+    \item The domain of $f^{-1}$ is range of $f$
+    \item The range of $f^{-1}$ is the domain of $f$
+    \item $f^{-1}(f(x)) = x$
+    \item $f(f^{-1}(x)) = x$
+\end{itemize}
+
+
+\paragraph{Steps to find inverse}
+\begin{enumerate}
+    \item Write $y=f(x)$
+    \item Solve this equation for $x$ in terms of $y$
+    \item To express $f^{-1}$ as a function of $x$, interchange $x$ and $y$.
+\end{enumerate}
+
+\subsubsection{Derivative of Inverse Function}
+If $f$ is a 1-to-1 differentiable function with inverse function $f^{-1}$, then the inverse function is differentiable and the following is true: 
+
+$$(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}$$
 
 
 
