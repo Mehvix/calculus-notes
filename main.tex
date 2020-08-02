@@ -25,8 +25,6 @@
 \newcommand{\vbrack}[1]{\langle #1\rangle}
 \newcommand\Inn{\mathrel{\ooalign{$\subset$\cr\hfil\scalebox{0.8}[1]{$=$}\hfil\cr}}}
 
-% https://tex.stackexchange.com/questions/32160/new-line-after-paragraph
-\newcommand{\paragraphNewLine}[1]{\paragraph{#1}\mbox{}\\}
 
 \def\Plus{\texttt{+}}
 \def\Minus{\texttt{-}}
@@ -154,11 +152,11 @@ In terms of a graph, a curve can only be a function if no vertical lines interse
     \item[-] Odd times odd is always even.
 \end{itemize}
 
-\paragraphNewLine{Increasing \& Decreasing:}
+\paragraph{Increasing \& Decreasing:}\\
 
-\textbf{Increasing : } A  function $f$ is called increasing on an interval if $f(x_1) < f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be positive.
+\noindent\textbf{Increasing : } A  function $f$ is called increasing on an interval if $f(x_1) < f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be positive.
 
-\textbf{Decreasing : } A  function $f$ is called increasing on an interval if $f(x_1) > f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be negative.
+\noindent\textbf{Decreasing : } A  function $f$ is called increasing on an interval if $f(x_1) > f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be negative.
 
 
 \subsubsection{Limits}
@@ -494,16 +492,16 @@ $$\includegraphics[width=0.7\textwidth]{media/mvt.png}$$
     \item $f''(x)<0$ for all $x$ in $I$, then the graph of $f$ is concave downwards on $I$
 \end{enumerate}
 
-\paragraphNewLine{Inflection Point:} A point $p$ on a curve $f(x)$ is called an inflection point if $f$ is continuous there and the curve changes at $p$ from concave up to concave down or vice versa.
+\paragraph{Inflection Point:} A point $p$ on a curve $f(x)$ is called an inflection point if $f$ is continuous there and the curve changes at $p$ from concave up to concave down or vice versa.
 
-\paragraphNewLine{Theorem:} At a point of inflection, $(c, f(c))$, either $f''(c)=0$ or $f''(c)$ DNE
+\paragraph{Theorem:} At a point of inflection, $(c, f(c))$, either $f''(c)=0$ or $f''(c)$ DNE.
 
 \subsection{Day 15}
 \subsubsection{Limit at $\infty{}$} Let $f$ be a function defined on some interval $(a, +\infty{})$. Then $\lim_{x \to \infty{}} f(x) = L$ means that the value of $f(x)$ can be made arbitrarily close to $L$ by making $x$ sufficiently large. In other words, for every $\epsilon > 0$, there is a number $N$ such that if $x<N$ then $|f(x)-L| < \epsilon$. "$N$": Large negative number.
 
 \subsubsection{Horizontal Asymptote} The line $y=L$ is called a  horizontal asymptote of the curve $y=f(x)$ if either $\lim_{x \to +\infty{}} f(x) = L$ or $\lim_{x \to -\infty{}} f(x) = L$
 
-\paragraphNewLine{Theorem} If $r>0$ is a rational number, then $\lim_{x \to \infty{}} \frac{1}{x^r} = 0$\\
+\paragraph{Theorem} If $r>0$ is a rational number, then $\lim_{x \to \infty{}} \frac{1}{x^r} = 0$\\
 If $r>0$ is a rational number such that $x^r$ is defined for all $x$, then $\lim_{x \to -\infty{}} \frac{1}{x^r} = 0$
 
 
@@ -612,7 +610,6 @@ $$\includegraphics[width=0.85\textwidth]{media/indef-integrals.JPG}$$
 
 
 
-
 \subsection{Day 22}
 
 \subsubsection{Integration by Substitution}  A function $F$ is called an anti-derivative of $f$ on an interval $I$ if $F’(x)=f(x)$ for all $x$ in $I$.
@@ -663,10 +660,97 @@ $$\includegraphics[width=0.65\textwidth]{media/onetoone.JPG}$$
     \item To express $f^{-1}$ as a function of $x$, interchange $x$ and $y$.
 \end{enumerate}
 
-\subsubsection{Derivative of Inverse Function}
+\subsubsection{Derivative of Inverse Function}\label{Derivative of Inverse Function}
 If $f$ is a 1-to-1 differentiable function with inverse function $f^{-1}$, then the inverse function is differentiable and the following is true: 
 
 $$(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}$$
+
+
+
+
+\section{Week 7}
+
+\subsection{Day 25}
+
+\subsubsection{Exponential Functions}
+A function $f$ is  exponential if it is in the form $f(x)=a^x, a>0, a\neq 1$. 
+\begin{itemize}
+    \item If $a>1$, the range is $(0, \infty)$ and greater the $a$, greater the slope
+    \item If $1>a>0$, the range is $(\infty, 0)$ and lower the $a$, greater the slope
+\end{itemize}
+
+\paragraph{Derivative of Exponential Function}
+$$a^x \cdot \lim_{h\to0} \frac{a^h-1}{h} = a^x \cdot f'(0)$$
+
+\subsubsection{$e$}
+The function $f(x)=e^x$ is called the natural exponential function because the derivative is itself.
+
+\subsection{Day 26}
+\subsubsection{Log Functions:} Exponential functions are 1-to-1, hence it has an inverse function $f^{-1}$:
+
+$$f^{-1} (x) = log_a x, x>0$$
+$$y=log_a x \iff a^y = x$$
+
+\noindent Therefore, if $a>1$ the function $f(x)=log_a x$ is a 1-to-1, continuous, increasing function with the domain $(0, \infty)$ and range $(-\infty, \infty)$. If $x$, $y>0$ and $r$ is any real number, then:
+
+$$log_a(xy)=log_a x + log_a y$$
+$$log_a(x/y)=log_a x - log_a y$$
+$$log_a(x^r)=r\cdot log_a x$$
+
+$$lim_{x\to \infty} [log_a x] = \infty$$
+$$lim_{x\to 0^+} [log_a x] = -\infty, a > 1$$
+
+\subsubsection{Inverse Function Rules:}
+
+$$(f \circ f^{-1})(x) = a^{log_a x} = x, x>0$$
+$$(f^{-1} \circ f)(x) = log_a (a^x) = x$$
+
+\subsubsection{Theorem} If $f$ is a 1-to-1 differentiable function with the inverse function $f^{-1}$, then the inverse function is differentiable and we can use \ref{Derivative of Inverse Function}: 
+
+$$(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}$$
+
+\subsection{Day 27}
+$$\frac{d}{dx} \left( \sin^{-1} x \right) = \frac{1}{\sqrt{1-x^2}}, (-1 < x < 1) \text{ between } -\frac{\pi}{2} \leq y \leq \frac{\pi}{2}$$
+$$\frac{d}{dx} \left( \cos^{-1} x \right) = -\frac{1}{\sqrt{1-x^2}}, (-1 < x < 1)  \text{ between } 0 \leq y \leq \pi$$
+$$\frac{d}{dx} \left( \tan^{-1} x \right) = \frac{1}{1+x^2}, x \in {\mathbb{} R}\text{ between } -\frac{\pi}{2} \leq y \leq \frac{\pi}{2}$$
+
+\subsection{Day 28}
+\subsubsection{Indeterminate Forms:}
+
+\begin{minipage}{0.45\textwidth}
+
+$$ \frac{0}{0}$$
+$$ \frac{\infty}{\infty}$$
+$$ 0^0$$\hfill
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\begin{tabular}{|p{\textwidth}}
+
+$$0 \cdot \infty (\neq{} 0)$$
+$$\infty - \infty (\neq{} 0)$$
+$$\infty^0$$
+
+\end{tabular}
+\end{minipage}
+
+\subsubsection{L'Hospital's Rule:} Suppose $f$ and $g$ are differentiable and $g'(x) \neq{} 0$ on an open interval $I$ that contains $a$ (except possibly at $a$). Suppose that 
+
+$$\lim_{x\to a} f(x)  = 0  \text{ and  } \lim_{x \to a} g(x) = 0$$
+$$\text{or that } \lim_{x\to a} f(x)  = \pm \infty  \text{ and  } \lim_{x \to a} g(x) = \infty$$
+
+\noindent (In other words, we have an indeterminate form of type $\frac{0}{0}$ or $\frac{\infty}{\infty}$.) Then
+
+$$\lim_{x\to a} \frac{f(x)}{g(x)} = \lim_{x\to a} \frac{f'(x)}{g'(x)}$$
+
+\noindent if the limit on the right side exists (or is $\infty$ or $-\infty$)
+
+
+
+
+
+
+
 
 
 
