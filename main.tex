@@ -152,11 +152,11 @@ In terms of a graph, a curve can only be a function if no vertical lines interse
     \item[-] Odd times odd is always even.
 \end{itemize}
 
-\paragraph{Increasing \& Decreasing:}\\
-
-\noindent\textbf{Increasing : } A  function $f$ is called increasing on an interval if $f(x_1) < f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be positive.
-
-\noindent\textbf{Decreasing : } A  function $f$ is called increasing on an interval if $f(x_1) > f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be negative.
+\paragraph{Increasing \& Decreasing:}
+\begin{itemize}
+\item \textbf{Increasing :} A  function $f$ is called increasing on an interval if $f(x_1) < f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be positive.
+\item \textbf{Decreasing :} A  function $f$ is called increasing on an interval if $f(x_1) > f(x_2)$ whenever $x_1 < x_2$. In other words, the slope must always be negative.
+\end{itemize}
 
 
 \subsubsection{Limits}
@@ -747,11 +747,44 @@ $$\lim_{x\to a} \frac{f(x)}{g(x)} = \lim_{x\to a} \frac{f'(x)}{g'(x)}$$
 
 
 
+\section{Week 8}
+\subsection{Day 29}
+\subsubsection{Area Between Lines} The area $A$ of the region bounded by the curves $y=f(x),\ y = g(x),$ and the lines $x=a, x=b$, where $f$ and $g$ are continuous and $f(x)>g(x)$ for  all $x$ in $[a,b]$ is 
+$$A = \int_a^b \left[ f(x) - g(x) \right] dx$$
+
+\noindent Or, if we just want to find the area inclsed we can use 
+$$A = \int_a^b \left| f(x) - g(x) \right| dx$$
 
 
+\subsubsection{Average value of $f$}
+We define the average value of $f$ on the interval $[a,b]$ as 
+$$f_{avg}= \frac{1}{b-a} \cdot \int_a^b f(x) dx$$
+
+\subsubsection{Mean Value Theorem for Integrals} If $f$ is continuous on $[a,b]$, then there exists a number $c$ in $[a,b]$ such that 
+
+$$f(x) = f_{avg} = f(c) \cdot (b-a)$$
 
 
+\subsection{Day 30}
+\subsubsection{Area of Shape} Let $S$ be a solid that lies between $x=a$ and $x=b$. If the cross-sectional area of $S$ in the plane $P_x$, through $x$ and perpendicular to the $x$-axis, is $A(x)$, where $A$ is a continuous function, then the volume of $S$ is 
 
+$$V=\lim_{n \to \infty} \sum_{i=1}^{n} A(x_i^*) \Delta x = \int_a^b A(x) dx$$
+
+\subsubsection{Volume}
+
+$$V=\int_a^b A(x) dx$$
+
+\subsubsection{Disk}
+
+$$A(x) = \pi \cdot r^2 \text{ if rotating about $x$-axis}$$
+
+\subsubsection{Cross-Section (washer)}
+
+$$A(x) = \pi \cdot (R^2 - r^2)  \text{ if rotating about $x$-axis}$$
+
+\subsubsection{Cylinder}
+
+$$A(x) = 2\pi x \cdot f(x) \cdot dx \text{ if rotating about $y$-axis}$$
 
 
 \end{document}
