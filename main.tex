@@ -816,9 +816,176 @@ $$\frac{dy}{dx} + P(x) \cdot y = Q(x)$$
 \end{enumerate}
 
 \section{Taylor Series}
+$$\frac{1}{1-x} = \sum_{n=0}^\infty x^n = 1+x+x^2+x^3+ ...$$
 
-$$e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^1}{2}+ \frac{x^2}{6}+ ...$$
+$$\frac{1}{1+x} = \sum_{n=0}^\infty (-1)^n x^n = 1-x+x^2-x^3+ ...$$
 
-$$\frac{1}{1-x} = \sum_{n=0}^\infty x^n = 1+x+x^2+x^3 ...$$
+$$e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^2}{2}+ \frac{x^3}{6}+ ...$$
+
+$$\ln(1+x) =  \sum_{n=1}^\infty (-1)^{n+1} \frac{x^n}{n} = x-\frac{1}{2}x^2 + \frac{1}{3}x^3-\frac{1}{4}x^4+...$$
+
+$$\sin(x) = \sum_{n=0}^\infty (-1)^n \cdot \frac{x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$$
+
+$$\cos(x) = \sum_{n=0}^\infty (-1)^n \cdot \frac{x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + ...$$
+
+
+$$\tan^{-1}(x) = \sum_{n=0}^\infty (-1)^n \cdot \frac{x^{2n+1}}{2n+1} = x - \frac{x^3}{3}+ \frac{x^5}{5}- \frac{x^7}{7}+ ...$$
+
+\subsection{Maclaurin  Series}
+Where $a$ is the given center, by default 0
+
+$$f(x) = \frac{f(a) (x-a)^0}{0!} +\frac{f^1(a) (x-a)^1}{1!} +\frac{f^2(a) (x-a)^2}{2!} +\frac{f^3(a) (x-a)^3}{3!} + ... $$
+
+\subsection{Linear Approximation}
+
+$$P_1 (x) = f(a) + f^1(a) (x-a)$$
+
+\subsection{Quadratic Approximation:}
+
+$$P_2 (x) = f(a) + f^1(a) (x-a) + f^2(a) \cdot \frac{1}{2} (x-a)^2$$
+
+
+\section{Integrating using Series}
+\begin{enumerate}
+    \item Find series 
+    \item Take integral
+    \item Evaluate at limits
+    \item Find the first term less than the error magnitude. Stop at one term before
+\end{enumerate}
+
+\section{Error}
+
+
+\subsection{Alternating}
+For a Taylor polynomial of order $n$ that alternates, the error will always be smaller than the first unused term. This error is given by the first unused term;
+
+$$R_n(x) = P_{n+1}(x)$$
+
+
+\subsection{Converges}
+
+For a Taylor polynomial of order $n$ that converges, the worst-case scenario is given by the following where $c \in (a,x)$
+
+$$R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-a)^{n+1}$$
+
+
+\section{Sequences \& Series}
+
+\begin{itemize}
+    \item $a_n$ represents the $n$th term of a \textbf{sequence}; $a_1, a_2, a_3, ...\ a_n$
+    \item The \textbf{series} is a the summation of a sequence; $a_1 + a_2 + a_3 + ...\ + a_n$
+    \item If the $\lim_{n\to\infty}$ of a sequence is $\infty$, the sequence diverges.
+    \item If the $\lim_{n\to\infty}$ of a sequence is a constant, the sequence converges.
+\end{itemize}
+
+\section{Monotonic Sequence Theorem}
+If a sequence $\{a_n\}$ is both  bounded and monotonic (meaning it's either nonincreasing or nondecreasing), then the sequence converges.
+
+$$\lim_{r\to\infty} r^n = 0 \text{ if } |r| < 1$$
+
+\section{Geometric Series}
+A geometric series is a series that has the first term of $a$ and a common ration of $r$ written as
+
+$$\sum_{n=0}^\infty a \cdot r^n$$
+
+\begin{itemize}
+    \item If $|r| < 1$ it converges to the sum of $\frac{a}{1-r}$
+    \item If $|r| \geq 1$  it diverges
+\end{itemize}
+
+\noindent The $n$th partial sum for $\sum_{n=1}^\infty ar^{n-1} $ is 
+
+$$a \cdot \frac{1-r^n}{1-r}$$
+
+\noindent and the interval of convergence is about $a$ and
+
+$$-1 < r < 1 \text{ solve for x}$$
+
+\noindent When the endpoints are plugged in to the series equation and it diverges, then it isn't included using parenthesis. If it converges, it is included using square brackets. If it equals $0$, the interval is $(-\infty,\infty)$. If it equals $\infty$, the interval is a single point.
+
+
+\subsection{Starting at $n \neq 0$}
+$$\sum_{n=b}^\infty a \cdot r^n = \sum_{n=0}^\infty \left(\frac{a}{r^b}\right) \cdot r^n$$
+
+\section{$p$-Series}
+$$ \sum_{n=1}^\infty \left(\frac{1}{n}\right)^p=
+\sum_{n=1}^\infty \frac{1}{n^p} = 
+\sum_{n=1}^\infty n^{-p}$$
+
+\begin{itemize}
+    \item Converges if $p>1$
+    \item Diverges if $p \leq 1$
+\end{itemize}
+
+\section{$n$-th term test}
+If the terms of a series (the sequence) don't converge to $0$, then the series diverges; however, the converse is not true! (e.g. $\sum \frac{1}{n}$ diverges even though its terms $\to$ 0)
+
+\section{Ratio Test} 
+For $\lim_{n\to\infty} \left| \frac{a_{n+1}}{a_n} \right| = r$ where $r$ is the ratio
+
+\begin{itemize}
+    \item $r < 1 \text{, series converges}$
+    \item $r > 1 \text{, series diverges}$
+    \item $r = 1 \text{, test inconclusive}$
+
+    ---
+    For Power Series
+
+    \item $r = 0$ the radius is $\infty$ so interval is  $(-\infty, \infty)$
+    \item $r = \infty$ the radius $0$ because the series converges at the center value.
+    \item $r = \frac{|x-c|}{R}$ the radius is $R$ so interval is  $(-R+c, R+c)$ but we don't know if the endpoints $|c|$ are included, so we should plug them into $a_n$ for $x$
+
+\end{itemize}
+
+\section{Root Test}
+\begin{itemize}
+    \item $\lim_{n\to\infty} \sqrt[n]{|a_n|} < 1 \text{, series converges}$
+    \item $\lim_{n\to\infty} 
+    \sqrt[n]{|a_n|} > 1 \text{, series diverges}$
+    \item $\lim_{n\to\infty} \sqrt[n]{|a_n|}  = 1 \text{, test inconclusive}$
+\end{itemize}
+
+
+\section{Integral Test}
+If $\sum_{n=1}^\infty a_n$ has positive, decreasing terms and $f(n) = a_n$ is continuous, then $\int_1^\infty f(x) dx$ and $\sum_{n=1}^\infty a_n$ either both converge or both diverge. Our resulting value is not what the series converges to!
+
+\section{Limit Comparison Test}For some $b_n > a_n$,  $\lim_{n\to\infty} \frac{a_n}{b_n} = c$, 
+
+\begin{itemize}
+    \item $c>0$ and finite$\implies$ $\sum a_n$ and $\sum b_n$ either both converge or diverge.
+    \item $c=0$ $\implies$ $\sum a_n$ and $\sum b_n$ converge
+    \item $c=\infty$ $\implies$ $\sum a_n$ and $\sum b_n$ diverge
+\end{itemize}
+
+
+\section{Alternating Series Test} If $\sum a_n$ is alternating, and the terms to go $0$ continually, then the series converges.
+
+\section{Absolute vs Conditional}
+\begin{itemize}
+    \item If $\sum |a_n|$ converges, then it converges absolutely.
+    \item If $\sum |a_n|$ diverges but $\sum a_n$ converges, it conditionally converges
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Factorial Rule}
+$$(ax+n)! = (ax+n) \cdot (ax+(n-1)) \cdot (ax+(n-2)) \cdot ... \cdot (ax)!$$
 
 \end{document}
