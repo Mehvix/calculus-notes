@@ -395,7 +395,7 @@ A related rates problem is to compute the rate of change (derivative) of one qua
 \textbf{Note: } The endpoint of a graph can never be a relative [max/min] because one side of the point is always undefined. 
 
 \section{Increasing/Decreasing Functions:}
-$$\includegraphics[scale=.75]{media/increasing-decreasing-functions.png}$$
+$$\includegraphics[scale=.7]{media/increasing-decreasing-functions.png}$$
 
 
 \section{Concavity:}
@@ -905,7 +905,7 @@ $$-1 < r < 1 \text{ solve for x}$$
 
 
 \subsection{Starting at $n \neq 0$}
-$$\sum_{n=b}^\infty a \cdot r^n = \sum_{n=0}^\infty \left(\frac{a}{r^b}\right) \cdot r^n$$
+$$\sum_{n=b}^\infty a \cdot r^n = \sum_{n=0}^\infty (a\cdot r^b) \cdot r^n$$
 
 \section{$p$-Series}
 $$ \sum_{n=1}^\infty \left(\frac{1}{n}\right)^p=
@@ -967,25 +967,186 @@ If $\sum_{n=1}^\infty a_n$ has positive, decreasing terms and $f(n) = a_n$ is co
 \end{itemize}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \section{Factorial Rule}
 $$(ax+n)! = (ax+n) \cdot (ax+(n-1)) \cdot (ax+(n-2)) \cdot ... \cdot (ax)!$$
+
+
+% Unit 3 start
+
+\section{Feedback}
+
+\begin{minipage}{0.5\textwidth}
+\textbf{Negative Feedback}
+\begin{itemize}
+    \item $y''=-y$
+    \item $y=\cos(x) \to y'' = -\cos(x)$
+    \item $y=\sin(x) \to y'' = -\sin(x)$
+\end{itemize}
+
+\hfill
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+
+\textbf{Positive Feedback}
+\begin{itemize}
+    \item $y''=y$
+    \item $y=e^x \to y'' = e^x$
+    \item $y=e^{-x} \to y'' = e^{-x}$
+\end{itemize}
+
+\end{tabular}
+\end{minipage}
+
+\section{Euler's Formula}
+$$e^{ix} = \cos(x) + i \cdot \sin(x)$$
+
+\section{2nd-order Linear DE}
+\subsection{Factoring}
+\begin{enumerate}
+    \item Two real distinct roots; $r_1$, $r_2$; $y=c_1 e^{r_1 x} + c_2 e^{r_2 x}$
+    \item Two complex roots; $\alpha \pm \beta x$; $y=e^{\alpha x}(c_1 \cos(\beta x) + c_2 \sin(\beta x))$
+    \item One repeated real root; $r$; $y=c_1 e^{rx} +c_2 xe^{r x}$
+\end{enumerate}
+
+\subsection{Undetermined Coefficients}
+\begin{enumerate}
+    \item Constant; $y_p = A$
+    \item $e^{\alpha x}$; $y_p = Ae^{\alpha x}$
+    \item $\sin(\alpha x)$ or $\cos(\alpha x)$; $y_p = A\cos(\alpha x) + B\sin(\alpha x)$
+\end{enumerate}
+
+\subsection{Solving}
+\subsubsection{If given two possible equations, $y_1$/$y_2$}
+\begin{enumerate}
+    \item Plug in the $y_1$/$y_2$ into the given equation to verify that the given functions work
+    \item Write the general solution
+    \item Plug in initial values, solve for constants
+    \item Plug in constants to find particular solution
+\end{enumerate}
+
+\subsubsection{Initial Value}
+\begin{enumerate}
+    \item Turn the equation  into it's auxiliary form and find it's roots
+    \item Find it's respective case and write the general solution
+    \item \textbf{If non-homogeneous (RHS $\neq$ 0)}, find RHS's case and add it to the end of the general solution
+    \item \text{Non-homo:} Plug $y_p$ into diff eq as $y$ and solve for constants $A$ (and  sometimes $B$)
+    \item Set up the initial values equations and find $c_1$ and $c_2$
+    \item Rewrite general solution with constants to get the particular solution
+\end{enumerate}
+
+\section{Parabolic Foci}
+\begin{minipage}{0.5\textwidth}
+$$4py=x^2$$
+\begin{itemize}
+    \item Focus at $(0,p)$
+    \item Directrix at $y=-p$
+    \item Opens along $y$
+\end{itemize}
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+
+$$4px=y^2$$
+\begin{itemize}
+    \item Focus at $(p,0)$
+    \item Directrix at $x=-p$
+    \item Opens along $x$
+\end{itemize}
+
+\end{tabular}
+\end{minipage}
+\begin{itemize}
+    \item $p$ is the focal length; distance from vertex to focus
+\end{itemize}
+
+
+\section{Elliptical Foci}
+\begin{minipage}{0.5\textwidth}
+$$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
+\begin{itemize}
+    \item Wider than it is tall
+    \item $a$ is the larger horizontal radius
+    \item $b$ is the smaller vertical radius
+    \item Focus at $(c,0)$
+    \item Vertices at $(a,0), (-a,0)$
+    \item Transverse axis about $x$
+\end{itemize}
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+
+$$\frac{y^2}{a^2} + \frac{x^2}{b^2} = 1$$
+\begin{itemize}
+    \item Taller than it is wide
+    \item $b$ is the smaller horizontal radius
+    \item $a$ is the larger vertical radius
+    \item Focus at $(0,c)$
+    \item Vertices at $(0,a), (0,-a)$
+    \item Transverse axis about $y$
+\end{itemize}
+
+\end{tabular}
+\end{minipage}
+
+\begin{itemize}    \item $c=\pm\sqrt{a^2-b^2}$
+\end{itemize}
+
+\section{Hyperbolic Foci}
+\begin{minipage}{0.5\textwidth}
+$$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$
+\begin{itemize}
+    \item Intersects with $x$ axis
+    \item Asymptote/slope along $\pm \frac{b}{a}$
+    \item Transverse axis about $x$
+    \item Focus at $(c,0)$
+\end{itemize}
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|p{\textwidth}}
+
+$$\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1$$
+\begin{itemize}
+    \item Intersects with $y$ axis
+    \item Asymptote/slope along $\pm \frac{a}{b}$
+    \item Transverse axis about $y$
+    \item Focus at $(0,c)$
+\end{itemize}
+\end{tabular}
+\end{minipage}
+
+\begin{itemize}
+    \item $a$ always associated with positive 
+    \item $c=\sqrt{a^2+b^2}$
+\end{itemize}
+
+\section{3D}
+\subsection{Distance in 3D}
+$$d=\sqrt{(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2}$$
+
+\subsection{Shapes}
+
+\begin{enumerate}
+    \item Ellipsoid -- 3 ellipses; $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$
+    \item Paraboloid -- 2 parabolas, 1 ellipse$^2$; $\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}$
+    \item Hyperboloid of one sheet$^1$ -- 1 ellipse, 2 hyperbolas; $\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$
+    \item Hyerpboloid of two sheets$^1$ -- 1 ellipse$^2$, 2 hyperbolas; $\frac{z^2}{c^2}-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$
+    \item Elliptical Cone -- 1 ellipse$^2$, 2 lines that cross
+    \item Cylinder -- Either 1 parabola, ellipse, or hyperbola.
+\end{enumerate}
+$^1$ One sheet has differing hyperbolic transverse axis while two sheets has the same
+\newline
+$^2$ non-zero value will need to be plugged in
+
+\subsection{Finding Intercepts}
+For each of the three variables, plug in $0$ for two and solve for the remaining.
+
+
+
+
+
 
 \end{document}
