@@ -1144,7 +1144,57 @@ $^2$ non-zero value will need to be plugged in
 \subsection{Finding Intercepts}
 For each of the three variables, plug in $0$ for two and solve for the remaining.
 
+\section{Parametric Equations}
+$$x=f(t) \& y=g(t)$$
+\begin{itemize}
+    \item Each $t$ value gives a point on the curve: $(f(t),g(t))$. 
+    \item Circle goes clockwise if $x$ is with $\sin$ or $y$ with $\cos$. 
+\end{itemize}
 
+\subsection{Solving Methods}
+\begin{enumerate}
+    \item Solve for $t$, plug in
+    \item Plot points
+\end{enumerate}
+
+\subsection{Parametrizing the Curve}
+Given two points -- $(x_0,y_0), (x,y)$ -- and a time interval, $\Delta t$
+\begin{itemize}
+    \item $x(t)=x_0 + at$ where $a=\frac{\Delta x}{\Delta t}$
+    \item $y(t)=y_0 + bt$ where $b=\frac{\Delta y}{\Delta t}$
+\end{itemize}
+
+\subsection{Size Constraints}
+\begin{itemize}
+    \item $x=t$: Right half: [x-shift]\ $\leq t < \infty$
+    \item $x=t$: Left half: $-\infty < t \leq$\ [x-shift]
+    \item $y=t$: Top half: [y-shift]\ $\leq t < \infty$
+    \item $y=t$: Bottom half: $-\infty < t \leq$\ [y-shift]
+\end{itemize}
+
+\subsection{Slope of Parametric Curve}
+$$\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}$$
+
+\subsection{Tangent Lines to Parametric}
+Given point $(x_0, y_0)$ and two parametric equations, $x(t), y(t)$
+\begin{enumerate}
+    \item Find $t$ by setting $x$ or $y$ equal to $0$ in their respective equation
+    \item Find the slope equation by solving $\frac{dy}{dx}$
+    \item Plug in $t$-values into step 2 equation to find slope $m$
+    \item Plug in everything to the formula $y-y_0=m(x-x_0)$
+\end{enumerate}
+
+\subsection{Second Derivative of Parametric Curve}
+$$\frac{d^2y}{dx^2} = \frac{\frac{d}{dt}\left(\frac{dy}{dx}\right)}{\frac{dx}{dt}}$$
+
+\subsection{Parametric Area}
+$$A=\int_a^b f(x) \ dx = \int_a^b y(t) \cdot \frac{dx}{dt} \cdot dx$$
+
+\subsection{Parametric Arc Length}
+$$s=\int_a^b = \sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx$$
+
+\subsection{Parametric Surface Area}
+$$SA = \int_a^b  2\pi \cdot y(t) \cdot \sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx$$
 
 
 
